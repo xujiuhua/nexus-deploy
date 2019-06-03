@@ -12,7 +12,7 @@
         <url>https://github.com/xujiuhua/nexus-deploy</url>
         <connection>scm:git:git@github.com:xujiuhua/nexus-deploy.git</connection>
         <developerConnection>scm:git:git@github.com:xujiuhua/nexus-deploy.git</developerConnection>
-<!--        <tag>HEAD</tag>-->
+        <tag>HEAD</tag>
     </scm>
 
     <distributionManagement>
@@ -42,14 +42,19 @@
 
     <build>
         <plugins>
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-scm-plugin</artifactId>-->
+<!--                <version>1.11.2</version>-->
+<!--                <configuration>-->
+<!--                    <connectionType>connection</connectionType>-->
+<!--                    <tagBase>git@github.com:xujiuhua/nexus-deploy.git/tags</tagBase>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-scm-plugin</artifactId>
-                <version>1.11.2</version>
-                <configuration>
-                    <connectionType>connection</connectionType>
-                    <tagBase>git@github.com:xujiuhua/nexus-deploy.git/tags</tagBase>
-                </configuration>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.5.3</version>
             </plugin>
         </plugins>
     </build>
