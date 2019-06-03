@@ -26,29 +26,8 @@
         </snapshotRepository>
     </distributionManagement>
 
-    <properties>
-        <project.version>3.1.1-SNAPSHOT</project.version>
-    </properties>
-    <profiles>
-        <profile>
-            <id>release</id>
-            <properties>
-                <project.version>3.1.1</project.version>
-            </properties>
-        </profile>
-    </profiles>
-
     <build>
         <plugins>
-<!--            <plugin>-->
-<!--                <groupId>org.apache.maven.plugins</groupId>-->
-<!--                <artifactId>maven-scm-plugin</artifactId>-->
-<!--                <version>1.11.2</version>-->
-<!--                <configuration>-->
-<!--                    <connectionType>connection</connectionType>-->
-<!--                    <tagBase>git@github.com:xujiuhua/nexus-deploy.git/tags</tagBase>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
