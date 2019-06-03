@@ -8,6 +8,13 @@
     <artifactId>nexus-deploy</artifactId>
     <version>${project.version}</version>
 
+    <scm>
+        <url>https://github.com/xujiuhua/nexus-deploy</url>
+        <connection>scm:git:git@github.com:xujiuhua/nexus-deploy.git</connection>
+        <developerConnection>scm:git:git@github.com:xujiuhua/nexus-deploy.git</developerConnection>
+<!--        <tag>HEAD</tag>-->
+    </scm>
+
     <distributionManagement>
         <repository>
             <id>xjh-release</id>
@@ -33,5 +40,18 @@
         </profile>
     </profiles>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-scm-plugin</artifactId>
+                <version>1.11.2</version>
+                <configuration>
+                    <connectionType>connection</connectionType>
+                    <tagBase>git@github.com:xujiuhua/nexus-deploy.git/tags</tagBase>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
