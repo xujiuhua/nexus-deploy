@@ -1,13 +1,14 @@
 ### 发布snapshot
-```bash
-mvn deploy
 ```
+<version>3.1.3-SNAPSHOT</version>
+```
+如果版本以`-SNAPSHOT`会发布到仓库`xjh-snapshot`；
+否则发布到仓库`xjh-release`
 
 ### 发布正式版准备工作
 ```bash
 mvn release:prepare 
-```
-```
+
 a.把你项目打一个release版本
 b.在git的tag中打一个tag
 c.自动升级SNAPSHOT 并提交更新后的pom文件到git
