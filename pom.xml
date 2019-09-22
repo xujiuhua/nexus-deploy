@@ -10,7 +10,7 @@
         <url>https://github.com/xujiuhua/nexus-deploy</url>
         <connection>scm:git:git@github.com:xujiuhua/nexus-deploy.git</connection>
         <developerConnection>scm:git:git@github.com:xujiuhua/nexus-deploy.git</developerConnection>
-    <tag>HEAD</tag>
+        <tag>HEAD</tag>
   </scm>
 
     <distributionManagement>
