@@ -9,9 +9,9 @@
     <version>1.0.0-SNAPSHOT</version>
 
     <scm>
-        <url>https://github.com/xujiuhua/nexus-deploy</url>
-        <connection>scm:git:git@github.com:xujiuhua/nexus-deploy.git</connection>
-        <developerConnection>scm:git:git@github.com:xujiuhua/nexus-deploy.git</developerConnection>
+        <url>https://gitee.com/johuer/nexus-demo.git</url>
+        <connection>scm:git@gitee.com:johuer/nexus-demo.git</connection>
+        <developerConnection>scm:git@gitee.com:johuer/nexus-demo.git</developerConnection>
     </scm>
 
     <distributionManagement>
