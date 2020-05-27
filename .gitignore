@@ -116,8 +116,4 @@ buildNumber.properties
 .idea/misc.xml
 .idea/vcs.xml
 nexus-demo.iml
-pom.xml
 src/
-!/.idea/
-!/nexus-demo.iml
-!/.idea/
