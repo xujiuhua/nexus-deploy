@@ -1,10 +1,53 @@
-### 发布snapshot
+Deploy到私服
+
+Setting.xml
+
+```xml
+<!-- 发布私服用户认证 -->
+<server>
+  <id>xjh-release</id>
+  <username>admin</username>
+  <password>admin123</password>
+</server>
+<server>
+  <id>xjh-snapshots</id>
+  <username>admin</username>
+  <password>admin123</password>
+</server>
+```
+
+Pom.xml
+
+```xml
+<!-- 发布私服的地址 -->
+<distributionManagement>
+  <repository>
+    <id>xjh-release</id>
+    <name>deployment repo release</name>
+    <url>http://localhost:5555/repository/xjh-release/</url>
+  </repository>
+  <snapshotRepository>
+    <id>xjh-snapshots</id>
+    <name>deployment repo snapshot</name>
+    <url>http://localhost:5555/repository/xjh-snapshots/</url>
+  </snapshotRepository>
+</distributionManagement>
+```
+
+> pom.xml中的id一定要对应上setting.xml中的id
+>
+> pom.xml中的id一定要对应上setting.xml中的id
+>
+> pom.xml中的id一定要对应上setting.xml中的id
+
+### snapshot发布
+
 ```bash
 mvn deploy
 ```
 注意事项：1.nexus上的仓库，属性version policy:Snapshot 2.deployment policy: Allow redeploy
 
-### 发布正式版准备工作
+### release发布(准备工作)
 ```bash
 mvn release:prepare 
 ```
@@ -20,7 +63,7 @@ mvn release:rollback
 ```
 将POM回退至release: prepare之前的状态，并提交。需要注意的是，该步骤不会删除release:prepare生成的标签，因此用户需要手动删除。
 
-### 发布正式版
+### release发布
 ```bash
 mvn release:perform
 ```
@@ -29,6 +72,8 @@ a.去git的tag上拿代码
 b.用tag上的代码，打一个release版的包
 c.deploy上你的maven私服
 ```
+
+### 其他说明
 
 https://www.cnblogs.com/jixp/p/10670786.html
 
@@ -42,6 +87,6 @@ scm参数说明：
     <url>https://github.com/xujiuhua/nexus-deploy</url>
     <connection>scm:git:git@github.com:xujiuhua/nexus-deploy.git</connection>
     <developerConnection>scm:git:git@github.com:xujiuhua/nexus-deploy.git</developerConnection>
-    <tag>HEAD</tag>
 </scm>
 ```
+
