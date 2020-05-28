@@ -29,3 +29,5 @@ a.去git的tag上拿代码
 b.用tag上的代码，打一个release版的包
 c.deploy上你的maven私服
 ```
+
+https://www.cnblogs.com/jixp/p/10670786.html
