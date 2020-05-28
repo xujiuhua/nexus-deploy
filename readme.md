@@ -31,3 +31,17 @@ c.deploy上你的maven私服
 ```
 
 https://www.cnblogs.com/jixp/p/10670786.html
+
+scm参数说明：
+- connection表示一个只读的scm地址，
+- developerConnection元素表示可写的scm地址，
+- url则表示可以在浏览器中访问的scm地址。
+> 为了能让Maven识别，connection和developerConnection必须以scm开头，冒号之后的部分表示版本控制工具的类型
+```xml
+<scm>
+    <url>https://github.com/xujiuhua/nexus-deploy</url>
+    <connection>scm:git:git@github.com:xujiuhua/nexus-deploy.git</connection>
+    <developerConnection>scm:git:git@github.com:xujiuhua/nexus-deploy.git</developerConnection>
+    <tag>HEAD</tag>
+</scm>
+```
