@@ -20,7 +20,7 @@
             <url>http://localhost:5555/repository/xjh-release/</url>
         </repository>
         <snapshotRepository>
-            <id>xjh-snapshot</id>
+            <id>xjh-snapshots</id>
             <name>deployment repo snapshot</name>
             <url>http://localhost:5555/repository/xjh-snapshot/</url>
         </snapshotRepository>
