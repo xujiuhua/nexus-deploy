@@ -4,16 +4,18 @@ Setting.xml
 
 ```xml
 <!-- 发布私服用户认证 -->
-<server>
-  <id>xjh-release</id>
-  <username>admin</username>
-  <password>admin123</password>
-</server>
-<server>
-  <id>xjh-snapshots</id>
-  <username>admin</username>
-  <password>admin123</password>
-</server>
+<servers>
+    <server>
+      <id>xjh-release</id>
+      <username>admin</username>
+      <password>admin123</password>
+    </server>
+    <server>
+      <id>xjh-snapshots</id>
+      <username>admin</username>
+      <password>admin123</password>
+    </server>
+<servers>
 ```
 
 Pom.xml
