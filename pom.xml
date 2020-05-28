@@ -22,7 +22,7 @@
         <snapshotRepository>
             <id>xjh-snapshots</id>
             <name>deployment repo snapshot</name>
-            <url>http://localhost:5555/repository/xjh-snapshot/</url>
+            <url>http://localhost:5555/repository/xjh-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
 
